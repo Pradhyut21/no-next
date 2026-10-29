@@ -8,6 +8,14 @@ updates:
     groups:
       development-tools:
         dependency-type: development
+    ignore:
+      # Runtime/toolchain major upgrades need a coordinated change, not an isolated bump.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
+      - dependency-name: jsdom
+        update-types: ['version-update:semver-major']
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:

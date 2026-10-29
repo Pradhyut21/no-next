@@ -8,6 +8,8 @@ Never commit the private participant tracker, contact information, participant d
 
 Run `npm run check` and `npm audit --audit-level=low`. GitHub workflows perform the engineering checks, dependency auditing, and CodeQL analysis. Pull requests additionally receive dependency review. Workflow actions are pinned to verified full commit hashes and use explicit job permissions. A passing scan is not a guarantee that all defects have been found.
 
+Node and its type definitions stay on the pinned major. jsdom and TypeScript major upgrades require a coordinated runtime/toolchain review; Dependabot still proposes compatible minor/patch updates, and dependency vulnerability audits continue to fail on known advisories. npm enforces declared engine compatibility so an unsupported major cannot silently enter the checked dependency set.
+
 ## Reporting a concern
 
 For an ordinary, non-sensitive defect, open an issue with reproduction steps and expected behavior. Do not include credentials, participant information, or exploit details that expose private data. For a sensitive concern, use GitHub's private vulnerability reporting option if it is enabled for this repository; otherwise contact the repository owner privately before sharing details.
