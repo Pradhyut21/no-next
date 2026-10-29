@@ -2,7 +2,7 @@
 
 ## Current state
 
-The local application and its tests are implemented. **No Emergent project, repository upload, import, public deployment, or genuine Wispr Flow recording has been performed by this implementation.** The private pilot tracker has no participant records. Public outcomes and voice-development entries remain pending.
+The local application and its tests are implemented. The source repository is [Pradhyut21/no-next](https://github.com/Pradhyut21/no-next); inspect its actual files and Actions runs for the publication and verification state. **No Emergent project, import, public deployment, or genuine Wispr Flow recording has been performed by this implementation.** The private pilot tracker has no participant records. Public outcomes and voice-development entries remain pending.
 
 The required final target is the actual Emergent application. A locally served app, screenshot, source archive, or deployment on another host does not satisfy that target.
 
@@ -12,7 +12,7 @@ Importing this local build is only the starting point. Substantive construction,
 
 [Emergent's FAQ](https://help.emergent.sh/faqs) documents importing an existing GitHub codebase **when creating a new job**. Import support does not guarantee that this particular build imports successfully. Its documentation does not promise automatic mid-job pulling or synchronization. See also the [workspace tour](https://help.emergent.sh/a-tour-of-the-workspace).
 
-1. Publish this reviewed source to a GitHub repository accessible to the actual Emergent account. Exclude `node_modules`, reports, private data, credentials, and the source workbook. Keep the lockfile, source, tests, and genuine public assets.
+1. Use the reviewed [source repository](https://github.com/Pradhyut21/no-next), verify its actual commit and checks, and ensure the Emergent account can access it. Source excludes `node_modules`, reports, private data, credentials, and the source workbook; it retains the lockfile, tests, and genuine public assets.
 2. In a **new** Emergent project, choose the documented GitHub import route and select that repository. Keep this a React/TypeScript frontend; do not add a database, authentication, AI API, or microphone.
 3. Ask Emergent to run the application and preserve the three experiences, deterministic UNKNOWN reasoning, aggregate validation, and empty states. Resolve real import/build incompatibilities in that project; record any divergence from the local version.
 4. Use actual Wispr Flow dictation for substantive work within that project: construct the real campaign evidence experience from supplied observations and permitted footage, revise the resulting behavior and explanation, and resolve observed functional gaps. Preserve all three experiences and the approved scope. Record what was built, inspected, accepted, or corrected. A spacing-only edit is insufficient for this requirement; do not manufacture a defect or expand the product just to create a recording.
@@ -58,7 +58,7 @@ For each genuine log entry, complete the typed fields in `src/content/voice-evid
 
 ## Remaining evidence and release record
 
-- GitHub source URL and imported commit: **pending**.
+- GitHub source: [Pradhyut21/no-next](https://github.com/Pradhyut21/no-next). Actual imported commit: **pending** until the Emergent import is performed.
 - Actual Emergent project URL and deployed public URL: **pending**.
 - Substantive construction, revision, and verification inside the new Emergent project through real Flow dictation: **pending**.
 - Original Wispr Flow development footage and resulting changes: **pending**.

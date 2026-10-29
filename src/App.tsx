@@ -56,7 +56,7 @@ export default function App() {
         </nav>
         <a
           className="header-github"
-          href="https://github.com/Pradhyut21"
+          href="https://github.com/Pradhyut21/no-next"
           target="_blank"
           rel="noreferrer"
         >
@@ -310,7 +310,7 @@ export default function App() {
         <p>The work is open. So is the next question.</p>
         <a
           className="text-link"
-          href="https://github.com/Pradhyut21"
+          href="https://github.com/Pradhyut21/no-next"
           target="_blank"
           rel="noreferrer"
         >

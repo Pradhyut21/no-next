@@ -1,5 +1,7 @@
 # Build 1 delivery report
 
+This is the Build 1 checkpoint record, captured before GitHub publication. Its source-file inventory describes that checkpoint. See the repository [README](../README.md) and [live Actions](https://github.com/Pradhyut21/no-next/actions) for subsequent publication and verification work.
+
 The local functional application is implemented. Local Build 2 verification has also been executed. Build 3 is not complete: actual Emergent construction, real Wispr Flow dictation evidence, pilot fieldwork, and deployment have not occurred in this implementation.
 
 ## 1. Actual files created or changed

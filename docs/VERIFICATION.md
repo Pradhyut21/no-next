@@ -56,7 +56,7 @@ The initial dependency installation also warned that the newest jsdom required a
 
 ## Limits and remaining work
 
-Automated accessibility scans do not establish full accessibility compliance. No manual screen-reader audit, physical-device session, Firefox/WebKit run, or timed recruiter study was conducted. The configured GitHub Actions workflow has not run remotely.
+Automated accessibility scans do not establish full accessibility compliance. No manual screen-reader audit, physical-device session, Firefox/WebKit run, or timed recruiter study was conducted. The local results above are distinct from the repository's [actual remote Actions runs](https://github.com/Pradhyut21/no-next/actions); inspect those runs before describing remote checks as passed.
 
 There is **no verified Emergent import or public deployment**. No genuine Flow recordings or real participant results were supplied. The private workbook remains outside this project and unchanged. External links are explicit source/product references; the final hosted journey and public access still require verification after a real Emergent deployment.
 
