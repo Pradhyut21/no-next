@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "planned",
+  "dates": { "start": null, "end": null },
+  "recruitment": {
+    "description": null,
+    "uniqueInvited": null,
+    "invitationDeliveries": null,
+    "volunteered": null,
+    "consented": null,
+    "started": null,
+    "completed": null
+  },
+  "usability": { "yes": null, "no": null, "notAsked": null },
+  "reuse": { "yes": null, "no": null, "notAsked": null },
+  "devices": [],
+  "languages": [],
+  "creativeExposures": [],
+  "friction": [],
+  "limitations": [],
+  "lessons": [],
+  "nextTest": null
+}
