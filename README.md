@@ -28,7 +28,7 @@ npm run check
 - Three distinct credibility challenges and deterministic stale-evidence decision branches.
 - Native modal evidence drawer with focus restoration and genuine, attributed JalRakshak screenshots and demonstration links.
 - Two authored campaign concepts and three student writing situations, without imitating a transcription product.
-- Validated aggregate results, correct respondent denominators, onboarding observation slots, and a compact development log.
+- Pending and completed aggregate result states, correct respondent denominators, onboarding observation slots, and a compact development log. Unknown observations stay unavailable; observed zero remains zero.
 - Mobile layouts, keyboard support, reduced motion, and local fonts.
 
 ## Current evidence status
@@ -55,6 +55,7 @@ Never place the private pilot workbook or participant text in `public/` or sourc
 
 ## Engineering and handoff
 
+- [Build 1 delivery report and file inventory](docs/BUILD1_REPORT.md)
 - [Architecture and product behavior](docs/PROJECT_SPEC.md)
 - [Pilot data dictionary](docs/PILOT_DATA_DICTIONARY.md)
 - [Evidence provenance](docs/EVIDENCE_MANIFEST.md)

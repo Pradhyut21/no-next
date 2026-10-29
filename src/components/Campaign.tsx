@@ -64,12 +64,10 @@ function ExperimentResults({ results }: { results: PilotResults }) {
         {results.status === 'complete' ? 'Pilot findings' : 'Pilot findings so far'}
       </p>
       {results.recruitment.description && <p>{results.recruitment.description}</p>}
-      {(results.dates.start || results.dates.end) && (
-        <p className="fine-print">
-          Observed period: {results.dates.start ?? 'Not supplied'} to{' '}
-          {results.dates.end ?? 'In progress'}
-        </p>
-      )}
+      <p className="fine-print">
+        Observed period: {results.dates.start ?? 'Start not recorded'} to{' '}
+        {results.dates.end ?? (results.status === 'complete' ? 'End not recorded' : 'In progress')}
+      </p>
       <dl className="pilot-counts">
         {counts.map(([label, count]) => (
           <div key={label}>
@@ -123,6 +121,8 @@ export default function Campaign() {
   const parsedPilot = pilotResultsSchema.safeParse(pilotData);
   const parsedVoice = voiceEvidenceSchema.safeParse(voiceEvidenceEntries);
   const results = parsedPilot.success ? parsedPilot.data : null;
+  const observedResults =
+    results && getEvidenceReadiness(results, []).hasPilotObservations ? results : null;
 
   return (
     <section
@@ -144,14 +144,22 @@ export default function Campaign() {
         </h2>
         <div className="campaign-intro">
           <p>Could speaking make it easier for students to start the writing they put off?</p>
-          <p>Two campaign ideas. Three everyday tasks. A small, real pilot to find out.</p>
+          <p>
+            {observedResults
+              ? 'Two campaign ideas. Three everyday tasks. The recorded observations are below.'
+              : 'Two campaign ideas. Three everyday tasks. A small, real pilot to find out.'}
+          </p>
         </div>
       </header>
 
       <div className="campaign-step-heading">
         <span className="step-number">01</span>
         <h3>Two ways to say “give it a try.”</h3>
-        <span className="fine-print">Campaign concepts · awaiting field observations</span>
+        <span className="fine-print">
+          {observedResults
+            ? 'Campaign concepts · observations below'
+            : 'Campaign concepts · awaiting field observations'}
+        </span>
       </div>
       <div className="creative-picker" aria-label="Campaign creative selection">
         {campaignCreatives.map((item) => (
@@ -324,51 +332,62 @@ export default function Campaign() {
         <div>
           <span className="eyebrow">What worked / what failed</span>
           <h3>
-            {results && results.lessons.length > 0
+            {observedResults && observedResults.lessons.length > 0
               ? 'What the sessions revealed.'
-              : 'The findings come after the fieldwork.'}
+              : observedResults
+                ? 'Lessons not yet recorded.'
+                : 'The findings come after the fieldwork.'}
           </h3>
-          {results && results.lessons.length > 0 ? (
+          {observedResults && observedResults.lessons.length > 0 ? (
             <ul>
-              {results.lessons.map((lesson) => (
+              {observedResults.lessons.map((lesson) => (
                 <li key={lesson}>{lesson}</li>
               ))}
             </ul>
           ) : (
             <p>
-              Lessons will be published after real sessions. An unexpected result belongs here too.
+              {observedResults
+                ? 'An interpretation has not been supplied. Counts alone do not explain what worked or failed.'
+                : 'Lessons will be published after real sessions. An unexpected result belongs here too.'}
             </p>
           )}
-          {results && results.friction.length > 0 && (
+          {observedResults && (
             <>
               <h4>Observed friction</h4>
-              <ul>
-                {results.friction.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              {observedResults.friction.length > 0 ? (
+                <ul>
+                  {observedResults.friction.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>Not recorded.</p>
+              )}
             </>
           )}
         </div>
         <div>
           <span className="eyebrow">Who we reached / who we missed</span>
           <h3>A small sample needs clear limits.</h3>
-          {results && results.limitations.length > 0 ? (
+          {observedResults && observedResults.limitations.length > 0 ? (
             <ul>
-              {results.limitations.map((item) => (
+              {observedResults.limitations.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           ) : (
             <p>
-              The planned recruitment relies on existing networks. Actual reach, missing groups,
-              device constraints, and sampling bias will be reported with the results.
+              {observedResults
+                ? 'Recruitment limitations and groups not reached have not been recorded.'
+                : 'The planned recruitment relies on existing networks. Actual reach, missing groups, device constraints, and sampling bias will be reported with the results.'}
             </p>
           )}
           <h4>What to test next</h4>
           <p>
-            {results?.nextTest ??
-              'Choose the next test from observed friction and feedback, rather than inventing a conclusion now.'}
+            {observedResults?.nextTest ??
+              (observedResults
+                ? 'No follow-up test has been recorded.'
+                : 'Choose the next test from observed friction and feedback, rather than inventing a conclusion now.')}
           </p>
         </div>
       </div>

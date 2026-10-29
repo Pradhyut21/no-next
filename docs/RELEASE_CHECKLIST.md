@@ -5,7 +5,7 @@
 - [x] Three main experiences and a complete guided route implemented.
 - [x] Credibility challenges use repository-backed facts.
 - [x] Deterministic scenario and genuine evidence links implemented.
-- [x] Two creatives, three writing situations, and pending results implemented.
+- [x] Two creatives, three writing situations, and pending/completed result states implemented.
 - [x] Strict aggregate and media schemas; no private workbook in source.
 - [x] Optional recordings, transcript/caption requirements, and safe fallbacks.
 - [x] Keyboard-accessible native dialog, reduced motion, responsive layouts.
@@ -25,6 +25,7 @@
 
 - [ ] Reviewed source uploaded to GitHub and imported into a new Emergent project.
 - [ ] Real import incompatibilities resolved and differences documented.
+- [ ] Substantive construction, revision, and verification performed inside the new Emergent project through actual Wispr Flow dictation.
 - [ ] Public Emergent URL opens without sign-in.
 - [ ] Hosted keyboard, mobile, drawer, media, results, and external-link checks pass.
 - [ ] Opening, campaign, log, and footer match the actual evidence state.

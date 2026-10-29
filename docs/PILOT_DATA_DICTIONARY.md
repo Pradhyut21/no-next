@@ -25,7 +25,7 @@ The private tracker is a source record, not a website asset. Its participant and
 | `lessons`                  | Supported interpretations, including failures. No causal creative winner from an observational convenience sample.                                             |
 | `nextTest`                 | A proposed follow-up based on observations, clearly distinguished from a completed action.                                                                     |
 
-All counts are nonnegative integers or null. Do not fill blank observations with zero. Funnel stages satisfy unique invited ≥ volunteered ≥ consented ≥ started ≥ completed when the relevant values are known. Missing intermediate counts must not permit impossible known totals. Feedback cannot exceed known upstream participant counts. Invitation deliveries can exceed unique adults because invitations may repeat.
+All counts are nonnegative integers or null. Do not fill blank observations with zero. Funnel stages satisfy unique invited ≥ volunteered ≥ consented ≥ started ≥ completed when the relevant values are known. Missing intermediate counts must not permit impossible known totals. Feedback cannot exceed known upstream participant counts. Each device/language category is bounded by every known invited, volunteered, or consented count; categories can overlap and can be recorded before a participant starts Flow. Invitation deliveries can exceed unique adults because invitations may repeat.
 
 ## Metrics
 

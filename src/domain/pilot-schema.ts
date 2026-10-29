@@ -95,14 +95,18 @@ export const pilotResultsSchema = z
 
     // A participant can test multiple languages or devices; categories may overlap.
     for (const field of ['devices', 'languages'] as const) {
-      const maximum = pilot.recruitment.consented;
       for (const [index, entry] of pilot[field].entries()) {
-        if (maximum !== null && entry.count !== null && entry.count > maximum) {
-          ctx.addIssue({
-            code: 'custom',
-            path: [field, index, 'count'],
-            message: `${field} category count cannot exceed consenting participants.`,
-          });
+        // A missing consent count must not bypass a known recruitment bound.
+        // Categories may be recorded before a participant starts dictating.
+        for (const stage of ['uniqueInvited', 'volunteered', 'consented'] as const) {
+          const maximum = pilot.recruitment[stage];
+          if (maximum !== null && entry.count !== null && entry.count > maximum) {
+            ctx.addIssue({
+              code: 'custom',
+              path: [field, index, 'count'],
+              message: `${field} category count cannot exceed ${stage}.`,
+            });
+          }
         }
       }
     }

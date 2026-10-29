@@ -114,6 +114,54 @@ describe('public pilot data contract', () => {
     expect(parsePilotResults(pilot).success).toBe(false);
   });
 
+  it.each(['devices', 'languages'] as const)(
+    'bounds %s categories by known invitees when intermediate counts are unknown',
+    (field) => {
+      const pilot = fixture();
+      pilot.recruitment.volunteered = null;
+      pilot.recruitment.consented = null;
+      pilot[field] = [{ label: 'Synthetic category', count: 21 }];
+      const parsed = parsePilotResults(pilot);
+      expect(parsed.success).toBe(false);
+      if (!parsed.success) {
+        expect(parsed.error.issues).toContainEqual(
+          expect.objectContaining({
+            path: [field, 0, 'count'],
+            message: `${field} category count cannot exceed uniqueInvited.`,
+          }),
+        );
+      }
+    },
+  );
+
+  it.each(['devices', 'languages'] as const)(
+    'bounds %s categories by known volunteers when consent is unknown',
+    (field) => {
+      const pilot = fixture();
+      pilot.recruitment.consented = null;
+      pilot[field] = [{ label: 'Synthetic category', count: 13 }];
+      const parsed = parsePilotResults(pilot);
+      expect(parsed.success).toBe(false);
+      if (!parsed.success) {
+        expect(parsed.error.issues).toContainEqual(
+          expect.objectContaining({
+            path: [field, 0, 'count'],
+            message: `${field} category count cannot exceed volunteered.`,
+          }),
+        );
+      }
+    },
+  );
+
+  it('allows recorded categories before a participant starts a dictation', () => {
+    const pilot = fixture();
+    pilot.recruitment.started = 0;
+    pilot.recruitment.completed = 0;
+    pilot.usability = { yes: 0, no: 0, notAsked: 0 };
+    pilot.reuse = { yes: 0, no: 0, notAsked: 0 };
+    expect(parsePilotResults(pilot).success).toBe(true);
+  });
+
   it('allows participants to test more than one language', () => {
     const pilot = fixture();
     pilot.languages.push({ label: 'Hinglish', count: 8 });

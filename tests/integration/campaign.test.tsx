@@ -159,6 +159,9 @@ describe('campaign aggregate result rendering', () => {
     expect(screen.getByText('Synthetic observed obstacle.')).toBeVisible();
     expect(screen.getByText('Synthetic cohort limitation.')).toBeVisible();
     expect(screen.getByText('Synthetic next test.')).toBeVisible();
+    expect(screen.getByText('Campaign concepts · observations below')).toBeVisible();
+    expect(screen.queryByText(/awaiting field observations/)).not.toBeInTheDocument();
+    expect(screen.queryByText('The findings come after the fieldwork.')).not.toBeInTheDocument();
   });
 
   it('distinguishes an observed zero from unavailable feedback', () => {
@@ -181,5 +184,33 @@ describe('campaign aggregate result rendering', () => {
     expect(within(results).getByRole('heading', { name: 'Results unavailable.' })).toBeVisible();
     expect(results.textContent).not.toContain('%');
     expect(results.textContent).not.toContain('99');
+  });
+
+  it('keeps unobserved planned findings out of the public experience', () => {
+    const pilot = fixture('planned');
+    pilot.lessons = ['Synthetic unpublished lesson.'];
+    pilot.friction = ['Synthetic unpublished friction.'];
+    pilot.limitations = ['Synthetic unpublished limitation.'];
+    pilot.nextTest = 'Synthetic unpublished follow-up.';
+    setPilot(pilot);
+    render(<Campaign />);
+    expect(screen.getByRole('heading', { name: 'Experiment in progress.' })).toBeVisible();
+    expect(screen.queryByText(/Synthetic unpublished/)).not.toBeInTheDocument();
+    expect(screen.getByText('Campaign concepts · awaiting field observations')).toBeVisible();
+  });
+
+  it('does not describe unknown completed metadata as ongoing or observed zero', () => {
+    const pilot = fixture();
+    pilot.dates.end = null;
+    setPilot(pilot);
+    render(<Campaign />);
+    expect(screen.getByText(/End not recorded/)).toBeVisible();
+    expect(screen.queryByText(/to In progress/)).not.toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Lessons not yet recorded.' })).toBeVisible();
+    expect(screen.getByText(/Counts alone do not explain what worked or failed/)).toBeVisible();
+    expect(
+      screen.getByText('Recruitment limitations and groups not reached have not been recorded.'),
+    ).toBeVisible();
+    expect(screen.getByText('No follow-up test has been recorded.')).toBeVisible();
   });
 });
