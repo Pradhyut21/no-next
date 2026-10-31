@@ -34,3 +34,7 @@ Independent HTTP requests also timed out on both URLs. These results establish a
 5. Finish the personal recording, evidence-based experiment report, current quotation-backed grant answer and actual submission.
 
 The edited showcase and repository checks support inspection. They do not establish genuine voice use, completed fieldwork, challenge eligibility or hiring selection.
+
+## Open repository security finding
+
+The published delivery commit's engineering workflow passed and its CodeQL job passed. Its full dependency audit reported 12 moderate findings rooted in an upstream minimatch advisory. No supported patched version is currently allowed by the inspected linting consumers. See the [advisory and actual workflow results](DEPENDENCY_ADVISORY.md); the security workflow must not be described as passed.

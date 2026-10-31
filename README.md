@@ -73,7 +73,7 @@ Playwright starts a local server when needed. Its report is written to `playwrig
 
 The live badges above link to the actual workflow runs. Engineering CI executes the full check sequence and retains the browser report and production build as artifacts. Security CI audits locked dependencies and runs CodeQL on JavaScript/TypeScript. Dependency review applies to pull requests; Dependabot checks npm and action updates weekly. Actions are pinned to full commit hashes and jobs use explicit permissions.
 
-The local dependency audit reported **zero known vulnerabilities** when checked. That result is time-specific; inspect the current workflow output and [security findings](https://github.com/Pradhyut21/no-next/security/code-scanning) for the latest state. See [security and privacy](SECURITY.md). A repository build artifact is not the required public Emergent deployment.
+**31 October dependency audit:** 12 moderate dependency findings are rooted in one upstream minimatch advisory in the development linting stack. Engineering CI and the CodeQL job passed; the full security workflow fails its dependency audit. The patched major is outside the current consumers' supported ranges. See the [open advisory and compatible-update blocker](docs/DEPENDENCY_ADVISORY.md), actual workflow output and [security and privacy](SECURITY.md). The older clean audit was time-specific. A repository build artifact is not the required public Emergent deployment.
 
 ## Evidence that is ready, and evidence still needed
 

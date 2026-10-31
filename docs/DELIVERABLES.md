@@ -33,4 +33,6 @@ Real pilot findings, original Flow-to-Emergent work recordings, verified public 
 
 Private form answers and working submission drafts are deliberately outside the public repository. No private contact information or participant workbook is distributed here.
 
+The current full dependency audit has an [open upstream advisory](DEPENDENCY_ADVISORY.md). Engineering and CodeQL success must be read separately from that failure.
+
 For future changes, follow [CONTRIBUTING.md](../CONTRIBUTING.md).

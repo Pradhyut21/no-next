@@ -27,3 +27,7 @@ The [machine-readable export record](media/showcase-verification.json) contains 
 ## Hosted verification limit
 
 The latest signed-out preview/Live browser attempts and independent HTTP requests failed before receiving HTML. **No hosted application checks executed.** The previous Live JavaScript defect cannot be reaffirmed or declared fixed by this run. See the [dated delivery status](DELIVERY_STATUS.md) for the observed URLs, failures and remaining gate.
+
+## Published checks and open advisory
+
+Delivery commit `f519fa43f5ff76fbeda820044c0b37dcda1ec736` passed [engineering CI](https://github.com/Pradhyut21/no-next/actions/runs/41193737424). The [security run](https://github.com/Pradhyut21/no-next/actions/runs/41193737395) passed its CodeQL job but failed its full dependency audit with 12 moderate findings rooted in one minimatch advisory. The [advisory record](DEPENDENCY_ADVISORY.md) documents the compatible-update blocker. Local audit attempts returned a registry-endpoint error; they are not passes. These observations do not weaken or suppress the audit gate.
