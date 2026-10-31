@@ -2,6 +2,8 @@
 
 Verified on **October 29, 2026**, on Windows with **Node 22.18.0**, npm **10.2.5**, and Playwright Chromium. These are executed local results, not claims about a hosted Emergent application.
 
+This is a **historical local baseline**. Later reported import, preview observations and hosted access failures are tracked separately in [delivery status](DELIVERY_STATUS.md); those do not change the results recorded here.
+
 ## Latest requested sequence
 
 Executed the requested commands in order: `npm run typecheck`, `npm run lint`, `npm run test`, `npm run build`, then `npm run test` again. Every command exited successfully. Both test runs passed 66 tests. Formatting and the complete browser suite were then executed successfully.

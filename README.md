@@ -8,11 +8,21 @@ An interactive portfolio that lets a reviewer challenge a claim, inspect one rea
 The guided route is designed for approximately 90–120 seconds, with optional source material for a closer look. **BOLO. DON'T TYPE.** is the campaign centerpiece: two messages, three familiar student tasks, and explicit denominators for a small adult pilot.
 
 > [!IMPORTANT]
-> **The local application is functional; the challenge entry remains incomplete.** Real participant results, original Wispr Flow recordings, substantive work inside a new Emergent project, and a public Emergent deployment are pending. The public app shows “Experiment in progress.” with no invented outcomes.
+> **The local application is functional; the challenge entry remains incomplete.** The portfolio has been observed in an Emergent preview after the reported import. Real pilot results, genuine Wispr Flow development evidence, and verified final public deployment remain open. The latest signed-out recheck on **31 October 2026** could not reach either Emergent URL, so hosted interaction tests did not execute. See the [dated delivery status](docs/DELIVERY_STATUS.md). Public pilot observations remain unknown; no outcomes are invented.
 
 ![NO → NEXT application preview, showing the honest pending experiment state](docs/images/portfolio-preview.png)
 
 _Actual local application capture. It is not an Emergent development recording or participant evidence._
+
+## Start here
+
+- [Deliverables index](docs/DELIVERABLES.md): source, setup, verification, evidence and handoff.
+- [25-second product showcase](docs/media/no-next-showcase.mp4) · [thumbnail](docs/media/showcase-poster.jpg) · [music credits](docs/media/CREDITS.md).
+- [Current delivery status](docs/DELIVERY_STATUS.md): what is observed, what is blocked, and what still needs authentic evidence.
+
+[![NO → NEXT product showcase: two campaign creatives with results pending](docs/media/showcase-poster.jpg)](https://raw.githubusercontent.com/Pradhyut21/no-next/main/docs/media/no-next-showcase.mp4)
+
+_Actual app-preview captures, edited text and licensed instrumental music. This is a product showcase, with pilot and voice evidence visibly pending. It does not replace the candidate's genuine Flow development recording or personal explanation of using voice._
 
 ## Explore the work
 
@@ -53,6 +63,8 @@ npm run check
 
 `check` runs TypeScript, ESLint, Prettier, Vitest, validated production compilation, and Playwright. Individual commands include `typecheck`, `lint`, `format:check`, `test`, `validate:content`, `build`, and `test:e2e`.
 
+**31 October rerun:** the complete local sequence passed again, including **66 Vitest tests and 23 Playwright tests**. See the [delivery verification record](docs/DELIVERY_VERIFICATION.md) for the actual checks and hosted-access limits.
+
 **Recorded local verification:** 66 Vitest tests passed, and 23 Playwright tests passed in Chromium. Coverage includes the full journey, pending/completed/partial/invalid aggregates, keyboard and dialog focus, reduced motion, and 360/390/768/1440px layouts. Automated accessibility scans covered pending and completed campaign states and the evidence drawer. These results do not establish a full accessibility certification, physical-device testing, or a hosted Emergent deployment. See [executed verification](docs/VERIFICATION.md) for the commands, results, fixes, and limits.
 
 Playwright starts a local server when needed. Its report is written to `playwright-report/`; failure traces are written to `test-results/`. GitHub workflow configuration and a successful local run are separate from an actually completed remote workflow.
@@ -89,6 +101,9 @@ Keep the private workbook, contact information, private messages, and participan
 
 ## Review and handoff documents
 
+- [Deliverables index](docs/DELIVERABLES.md)
+- [Current delivery status](docs/DELIVERY_STATUS.md)
+- [Contribution and evidence-update workflow](CONTRIBUTING.md)
 - [Requirement-by-requirement audit](docs/REQUIREMENTS_AUDIT.md)
 - [Architecture and behavior](docs/PROJECT_SPEC.md)
 - [Pilot data dictionary](docs/PILOT_DATA_DICTIONARY.md)

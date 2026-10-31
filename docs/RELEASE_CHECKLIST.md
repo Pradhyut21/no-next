@@ -23,15 +23,18 @@
 
 ## Emergent deployment and submission
 
-- [ ] Reviewed source uploaded to GitHub and imported into a new Emergent project.
+- [x] Reviewed source published to GitHub.
+- [x] Compiled portfolio observed at an Emergent preview after the reported import.
+- [ ] Exact imported commit, new-project provenance and workspace source export recorded.
 - [ ] Real import incompatibilities resolved and differences documented.
 - [ ] Substantive construction, revision, and verification performed inside the new Emergent project through actual Wispr Flow dictation.
 - [ ] Public Emergent URL opens without sign-in.
 - [ ] Hosted keyboard, mobile, drawer, media, results, and external-link checks pass.
 - [ ] Opening, campaign, log, and footer match the actual evidence state.
 - [ ] Short experiment report uses actual counts and limitations.
-- [ ] Video is at most three minutes and uses genuine recordings.
+- [x] Short product showcase exported with real preview captures, music credits and explicit pending evidence.
+- [ ] Personal submission video is at most three minutes, explains genuine voice use and includes authentic development recordings.
 - [ ] Grant answer uses defensible current quotations; no award/purchase claimed.
 - [ ] Final submission reviewed and actually submitted through the challenge process.
 
-Unchecked real-world requirements remain open even when all local automated checks pass.
+See [dated delivery status](DELIVERY_STATUS.md) for the latest hosted access failures. Earlier preview success and current connection failures do not verify the final public release. Unchecked real-world requirements remain open even when all local automated checks pass.

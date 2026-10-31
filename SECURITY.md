@@ -14,4 +14,4 @@ Node and its type definitions stay on the pinned major. jsdom and TypeScript maj
 
 For an ordinary, non-sensitive defect, open an issue with reproduction steps and expected behavior. Do not include credentials, participant information, or exploit details that expose private data. For a sensitive concern, use GitHub's private vulnerability reporting option if it is enabled for this repository; otherwise contact the repository owner privately before sharing details.
 
-Only the current repository version is maintained. No hosted Emergent deployment or security review of such a deployment is claimed until it is actually created and verified.
+Only the current repository version is maintained. Repository checks do not establish the security of the attempted Emergent deployment. Its latest observed preview, earlier runtime failure and current access limits are recorded in [delivery status](docs/DELIVERY_STATUS.md).

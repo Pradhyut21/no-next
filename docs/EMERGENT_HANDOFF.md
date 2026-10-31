@@ -2,7 +2,7 @@
 
 ## Current state
 
-The local application and its tests are implemented. The source repository is [Pradhyut21/no-next](https://github.com/Pradhyut21/no-next); inspect its actual files and Actions runs for the publication and verification state. **No Emergent project, import, public deployment, or genuine Wispr Flow recording has been performed by this implementation.** The private pilot tracker has no participant records. Public outcomes and voice-development entries remain pending.
+The local application and its tests are implemented. The source repository is [Pradhyut21/no-next](https://github.com/Pradhyut21/no-next); inspect its actual files and Actions runs for the publication and verification state. **This local implementation did not itself create an Emergent project or record Wispr Flow use.** The user subsequently reported importing the portfolio, and the actual compiled app was observed in an Emergent preview. The imported commit and exported workspace source remain unconfirmed; genuine Flow recordings and successful final public-deployment verification remain pending. See [31 October delivery status](DELIVERY_STATUS.md) for the dated observations and latest access failures. The private pilot tracker has no participant records. Public outcomes and voice-development entries remain pending.
 
 The required final target is the actual Emergent application. A locally served app, screenshot, source archive, or deployment on another host does not satisfy that target.
 
@@ -58,12 +58,12 @@ For each genuine log entry, complete the typed fields in `src/content/voice-evid
 
 ## Remaining evidence and release record
 
-- GitHub source: [Pradhyut21/no-next](https://github.com/Pradhyut21/no-next). Actual imported commit: **pending** until the Emergent import is performed.
-- Actual Emergent project URL and deployed public URL: **pending**.
+- GitHub source: [Pradhyut21/no-next](https://github.com/Pradhyut21/no-next). Import was reported and the compiled portfolio observed; exact imported commit: **unconfirmed**.
+- Existing Emergent preview and attempted Live URLs are recorded in [delivery status](DELIVERY_STATUS.md). Current reachability and final public release verification: **pending**.
 - Substantive construction, revision, and verification inside the new Emergent project through real Flow dictation: **pending**.
 - Original Wispr Flow development footage and resulting changes: **pending**.
 - Real Flow demonstration with a throwaway task: **pending**.
 - Actual adult pilot counts, feedback, friction, and limits: **pending**.
-- Signed-out hosted smoke test: **pending**.
+- Signed-out hosted smoke test: an earlier preview passed; the latest preview/Live recheck could not connect. Successful verification of the final public release remains **pending**.
 
-Only after these application/evidence checks should the final experiment report, video of at most three minutes, and grant answer be completed. Use actual footage and current supplier quotations. No video, grant budget, or presentation has been fabricated as part of this handoff.
+Only after these application/evidence checks should the final experiment report, video of at most three minutes, and grant answer be completed. Use actual footage and current supplier quotations. The [product showcase](media/no-next-showcase.mp4) uses real preview captures and explicit pending labels. Private setup/budget drafts are proposals outside this repository, not purchases or verified final submission materials.

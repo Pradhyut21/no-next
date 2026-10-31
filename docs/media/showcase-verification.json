@@ -1,0 +1,22 @@
+{
+  "file": "no-next-showcase.mp4",
+  "sha256": "1436bdc9104bca356ec36c2fb794553bc1f93fd4f2a9cc34cc2387d67739473d",
+  "bytes": 2633218,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "frames": 750,
+  "durationSeconds": 25.0,
+  "audioPresent": true,
+  "poster": "showcase-poster.jpg",
+  "posterFrameZero": true,
+  "fullDecode": "passed after final mastering",
+  "audioAudition": "Not performed by agent; numerical analysis only",
+  "claims": "Product showcase from actual preview captures; not genuine Flow development proof or participant evidence.",
+  "audioCodec": "aac",
+  "audioSampleRate": "48000",
+  "integratedLoudnessLUFS": -18.08,
+  "truePeakDBTP": -1.44,
+  "loudnessRangeLU": 2.3,
+  "audioMastering": "Two-pass loudness normalization; original mix measured -27.08 LUFS, final target -18 LUFS; video stream copied unchanged"
+}
